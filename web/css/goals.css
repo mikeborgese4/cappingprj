@@ -1,0 +1,24 @@
+.card-header{
+background-color: dodgerblue;
+color: white;
+}
+
+.card-body{
+padding :0px;
+}
+p{
+margin-bottom : 0px;
+}
+.leLeft{
+
+}
+.liLeft{
+text-align:left;
+float:left;
+}.liRight{
+text-align:right;
+float:right;
+}
+.card-group [class*='col-'] {
+  float:none;
+}

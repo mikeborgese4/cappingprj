@@ -1,0 +1,34 @@
+
+#overview{
+border-radius: 5px;
+ border: solid grey;
+ border-width: 1px;
+
+}
+
+.row{
+padding: 15px;
+
+}
+#header{
+    background-color: dodgerblue;
+    color : white;
+border-radius: 5px;
+}
+#summary{
+}
+#calCalc{
+text-align: center;
+}
+
+.link{color:black !important;}
+#recs{
+margin-top: 45px;
+}
+.card-deck{
+margin-bottom: 20px;}
+#recTitle{
+color: dodgerblue;}
+#seeMoreRec{
+color:black !important;
+}

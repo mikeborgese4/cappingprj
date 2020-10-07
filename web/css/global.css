@@ -1,0 +1,22 @@
+.nav-item{
+    min-width: 175px;
+    text-align: center;
+}
+
+.navbar{
+    margin-bottom: 15px;
+    background-color: dodgerblue !important;
+}
+.footerLinks{
+color: black !important;
+}
+a { color :white !important;}
+.navbar-nav > .active > a {
+    color: navy !important ;
+}
+body{
+overflow-x: hidden
+}
+.navbar-inverse{
+background-color: whitesmoke !important;
+}
