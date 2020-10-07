@@ -12,6 +12,8 @@ margin-bottom : 0px;
 .leLeft{
 
 }
+
+
 .liLeft{
 text-align:left;
 float:left;
@@ -22,3 +24,10 @@ float:right;
 .card-group [class*='col-'] {
   float:none;
 }
+.row{padding-bottom: 15px;}
+
+
+#macroRow{
+  padding-bottom: 50px;
+}
+

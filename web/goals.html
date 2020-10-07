@@ -38,15 +38,15 @@
 </nav>
 <div class ="row" id = "recs">
     <div class = "offset-1 col-10 col-md-8 offset-md-2">
-        <h2 id="recTitle" style="text-align:left;float:left;">Recommended Foods</h2>
+        <h2 class="title" style="text-align:left;float:left;">Your Daily Goals</h2>
         <br>  <br>
         <hr>
         <div>
-            <div class="row">
+            <div id ="macroRow" class="row card-group">
             <div class="col-6">
                 <div class = "card">
                 <div class="card-header">
-                    <h3>Your Daily Nutrition Goals</h3>
+                    <h4>Today's Nutritional Consumption</h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
@@ -69,75 +69,173 @@
                     </ul>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted">Edit Your Nutrition Goals</small>
+                    <small class="text-muted">Add a meal</small>
                 </div>
             </div>
             </div>
 
                 <div class="col-6">
-                    <div class="card">
-                <div class="card-header">
-                    <h3>Micronutrients</h3>
-                </div>
-                <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <p  class="liLeft">Saturated Fat</p>
-                            <p class="liRight">O G</p>
-                        </li>
-                        <li class="list-group-item">
-                            <p  class="liLeft">Polyunsaturated Fat</p>
-                            <p class="liRight">0 G</p>
-                        </li>
-                        <li class="list-group-item">
-                            <p  class="liLeft">Trans Fat</p>
-                            <p class="liRight">0 G </p>
-                        </li>
-                        <li class="list-group-item">
-                            <p  class="liLeft">Cholesterol</p>
-                            <p class="liRight">0 G</p>
-                        </li>
-                        <li class="list-group-item">
-                            <p  class="liLeft">Sodium</p>
-                            <p class="liRight">0 G</p>
-                        </li>
-                        <li class="list-group-item">
-                            <p  class="liLeft">Potassium</p>
-                            <p class="liRight">0 G</p>
-                        </li>
-                        <li class="list-group-item">
-                            <p  class="liLeft">Fiber</p>
-                            <p class="liRight">0 G</p>
-                        </li>
-                        <li class="list-group-item">
-                            <p  class="liLeft">Sugar</p>
-                            <p class="liRight">0 G</p>
-                        </li>
-                        <li class="list-group-item">
-                            <p  class="liLeft">Vitamin A</p>
-                            <p class="liRight">0 G</p>
-                        </li>
-
-                        <li class="list-group-item">
-                            <p  class="liLeft">Vitamin C</p>
-                            <p class="liRight">0 G</p>
-                        </li>
-                        <li class="list-group-item">
-                            <p  class="liLeft">Calcium</p>
-                            <p class="liRight">0 G</p>
-                        </li>
-                        <li class="list-group-item">
-                            <p  class="liLeft">Iron</p>
-                            <p class="liRight">0 G</p>
-                        </li>
-
-                    </ul>
-
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Edit Your Nutrition Goals</small>
+                    <div class = "card">
+                        <div class="card-header">
+                            <h4>Your Daily Nutrition Goals</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <p  class="liLeft">Calories</p>
+                                    <p class="liRight">2000</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p  class="liLeft">Protein</p>
+                                    <p class="liRight">50 g</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p  class="liLeft">Carbs</p>
+                                    <p class="liRight">100 g</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p  class="liLeft">Fat</p>
+                                    <p class="liRight">60 g</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Edit Your Nutrition Goals</small>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="row card-group">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Micronutrients Consumption</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <p  class="liLeft">Saturated Fat</p>
+                                <p class="liRight">O G</p>
+                            </li>
+                            <li class="list-group-item">
+                                <p  class="liLeft">Polyunsaturated Fat</p>
+                                <p class="liRight">0 G</p>
+                            </li>
+                            <li class="list-group-item">
+                                <p  class="liLeft">Trans Fat</p>
+                                <p class="liRight">0 G </p>
+                            </li>
+                            <li class="list-group-item">
+                                <p  class="liLeft">Cholesterol</p>
+                                <p class="liRight">0 G</p>
+                            </li>
+                            <li class="list-group-item">
+                                <p  class="liLeft">Sodium</p>
+                                <p class="liRight">0 G</p>
+                            </li>
+                            <li class="list-group-item">
+                                <p  class="liLeft">Potassium</p>
+                                <p class="liRight">0 G</p>
+                            </li>
+                            <li class="list-group-item">
+                                <p  class="liLeft">Fiber</p>
+                                <p class="liRight">0 G</p>
+                            </li>
+                            <li class="list-group-item">
+                                <p  class="liLeft">Sugar</p>
+                                <p class="liRight">0 G</p>
+                            </li>
+                            <li class="list-group-item">
+                                <p  class="liLeft">Vitamin A</p>
+                                <p class="liRight">0 G</p>
+                            </li>
+
+                            <li class="list-group-item">
+                                <p  class="liLeft">Vitamin C</p>
+                                <p class="liRight">0 G</p>
+                            </li>
+                            <li class="list-group-item">
+                                <p  class="liLeft">Calcium</p>
+                                <p class="liRight">0 G</p>
+                            </li>
+                            <li class="list-group-item">
+                                <p  class="liLeft">Iron</p>
+                                <p class="liRight">0 G</p>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Add a meal</small>
+                    </div>
+                </div>
+            </div>
+
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Micronutrients Goals</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <p  class="liLeft">Saturated Fat</p>
+                                    <p class="liRight">O G</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p  class="liLeft">Polyunsaturated Fat</p>
+                                    <p class="liRight">0 G</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p  class="liLeft">Trans Fat</p>
+                                    <p class="liRight">0 G </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p  class="liLeft">Cholesterol</p>
+                                    <p class="liRight">0 G</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p  class="liLeft">Sodium</p>
+                                    <p class="liRight">0 G</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p  class="liLeft">Potassium</p>
+                                    <p class="liRight">0 G</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p  class="liLeft">Fiber</p>
+                                    <p class="liRight">0 G</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p  class="liLeft">Sugar</p>
+                                    <p class="liRight">0 G</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p  class="liLeft">Vitamin A</p>
+                                    <p class="liRight">0 G</p>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <p  class="liLeft">Vitamin C</p>
+                                    <p class="liRight">0 G</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p  class="liLeft">Calcium</p>
+                                    <p class="liRight">0 G</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p  class="liLeft">Iron</p>
+                                    <p class="liRight">0 G</p>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Edit Your Nutrition Goals</small>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
