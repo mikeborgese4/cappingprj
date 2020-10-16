@@ -36,36 +36,39 @@
 
         </div>
     </nav>
-    <div class ="row">
-        <div class="col-sm-6 offset-3" id ="overview">
-            <div class="row" id ="header"><h2 color="white" > Hello Your Name</h2></div>
-            <div class="row" id ="summary">
-                <div class="col-sm-6">
-                    <h5>Your Daily Summary</h5>
+    <div class="row">
+        <div class="offset-1 col-10 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+        <div class="card">
+            <div class="card-header">
+                <h2 color="white" > Hello Your Name</h2>
             </div>
-                <div class="col-sm-6">
-                <button  type="button" class="btn btn-info float-right" >Add Food</button>
+            <div class="card-body">
+                <div class="row" id ="summary">
+                    <div class="col-sm-6">
+                        <h5>Your Daily Summary</h5>
+                    </div>
+                    <div class="col-sm-6">
+                        <button id="addFoodLink" type="button" onclick="document.location.href='addmeal.html';"
+                                class="btn btn-info float-right" >Add Food</button>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3" id ="remainingCals" >
+                <div class="row">
+                    <div class="col-12 col-md-3 " id ="remainingCals" >
                         Your remaining Calories <br>
                         <h3 id="claRemaining"> 2000</h3>
                     </div>
 
-                    <div class="col-md-2"><br>Goal:<br><h3>2000</h3>  </div>
-                    <div class="col-md-1"><br><br><h3>-</h3>  </div>
-                    <div class="col-2"><br>Food:<br><h3>0 </h3>  </div>
-                    <div class="col-1"><br><br><h3>= </h3>  </div>
-                    <div class="col-2"><br>Remaining:<br><h3>2000</h3>  </div>
+                    <div class="col-4 col-md-3 "><br>Goal:<br><h3>2000    -</h3>  </div>
+                    <div class=" col-4 col-md-3"><br>Food:<br><h3>0    &#9;= </h3>  </div>
+                    <div class="col-4 col-md-3 "><br>Remaining:<br><h3>2000</h3>  </div>
 
+                </div>
             </div>
-            <div class="row">
-                <div ><a class="link" href="google.com"> See your daily goals.</a></div>
-
+            <div class ="card-footer">
+                <a class="link" href="goals.html">See your daily goals!</a>
             </div>
         </div>
-
+        </div>
     </div>
     <div class ="row" id = "recs">
         <div class = "offset-1 col-10 col-md-8 offset-md-2">
@@ -77,37 +80,7 @@
                     <img class="card-img-top" src="images/chicken.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Grilled Chicken </h5>
-                        <p>Calories: </p>
-                        <p>Carbs: </p>
-                        <p>Fat: </p>
-                        <p>Protein: </p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">                        <a class="link"> See More </a>
-                        </small>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card-img-top" src="images/burger.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p>Calories: </p>
-                        <p>Carbs: </p>
-                        <p>Fat: </p>
-                        <p>Protein: </p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">                        <a class="link"> See More </a>
-                        </small>
-                    </div>
-                </div>
-
-            </div>
-            <div class="card-deck">
-                <div class="card">
-                    <img class="card-img-top" src="images/chicken.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Grilled Chicken </h5>
+                        <p class="recReason"> This food is high in Protein!</p>
                         <p>Calories: </p>
                         <p>Carbs: </p>
                         <p>Fat: </p>
@@ -123,6 +96,42 @@
                     <img class="card-img-top" src="images/burger.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
+                        <p class="recReason"> This food is high in Protein!</p>
+                        <p>Calories: </p>
+                        <p>Carbs: </p>
+                        <p>Fat: </p>
+                        <p>Protein: </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">
+                            <a class="link"> See More </a>
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-deck">
+                <div class="card">
+                    <img class="card-img-top" src="images/chicken.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Grilled Chicken </h5>
+                        <p class="recReason">This food is high in Protein!</p>
+                        <p>Calories: </p>
+                        <p>Carbs: </p>
+                        <p>Fat: </p>
+                        <p>Protein: </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">
+                            <a class="link"> See More </a>
+                        </small>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="images/burger.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="recReason"> This food is high in Protein!</p>
                         <p>Calories: </p>
                         <p>Carbs: </p>
                         <p>Fat: </p>
@@ -142,9 +151,9 @@
     <div class="navbar navbar-inverse navbar-fixed-bottom">
 
         <nav>
-            <a class="footerLinks" href="some-url" >Footer link</a> <br>
-            <a class="footerLinks" href="some-url">Footer link</a><br>
-            <a  class="footerLinks" href="some-url">Footer link</a>
+            <a class="footerLinks" href="goals.html" >Goals</a> <br>
+            <a class="footerLinks" href="addmeal.html">Add a meal</a><br>
+            <a  class="footerLinks" href="settings.html">More</a>
         </nav>
         <!-- Copyright footnote -->
         &copy; 2020 Some copyright message.

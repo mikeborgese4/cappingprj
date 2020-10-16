@@ -5,10 +5,13 @@
 
 
     <link rel="stylesheet" type="text/css" href="libraries/bootstrap-4.3.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="libraries/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css.css">
+    <link rel="stylesheet" type="text/css" href="libraries/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
     <link rel="stylesheet" type="text/css" href="css/addmeal.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="stylesheet" type="text/css" href="css/global.css">
+    <script type="text/javascript" src="js/addmeal.js"></script>
+    <script type="text/javascript" src="libraries/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="libraries/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <title>Add A Meal</title>
 </head>
 <body>
@@ -40,20 +43,22 @@
 <div class ="row" id = "recs">
     <div class = "offset-1 col-10 col-md-8 offset-md-2">
         <div style=" margin-bottom:15px;">
-        <h2 id="recTitle" style="text-align:left;float:left;" class="title" >Recommended Foods</h2>
-       <button type="button" class="btn btn-primary"style="text-align:right;float:right;">Create your own food</button>
+            <h2 id="recTitle" style="text-align:left;float:left;" class="title" >Recommended Foods</h2>
+            <button type="button" class="btn btn-primary"style="text-align:right;float:right;" data-toggle="modal" data-target="#createFoodModal">Create your own food</button>
         </div>
-       <br>
+        <br>
         <hr>
         <div class="card-deck">
             <div class="card">
                 <img class="card-img-top" src="images/chicken.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Grilled Chicken </h5>
+                    <p class="recReason"> This food is high in Protein!</p>
                     <p>Calories: </p>
                     <p>Carbs: </p>
                     <p>Fat: </p>
                     <p>Protein: </p>
+
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">
@@ -65,6 +70,7 @@
                 <img class="card-img-top" src="images/burger.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
+                    <p class="recReason"> This food is high in Protein!</p>
                     <p>Calories: </p>
                     <p>Carbs: </p>
                     <p>Fat: </p>
@@ -83,6 +89,7 @@
                 <img class="card-img-top" src="images/chicken.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Grilled Chicken </h5>
+                    <p class="recReason"> This food is high in Protein!</p>
                     <p>Calories: </p>
                     <p>Carbs: </p>
                     <p>Fat: </p>
@@ -98,15 +105,20 @@
                 <img class="card-img-top" src="images/burger.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
+                    <p class="recReason"> This food is high in Protein!</p>
                     <p>Calories: </p>
                     <p>Carbs: </p>
                     <p>Fat: </p>
                     <p>Protein: </p>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted">
-                        <a class="link"> See More </a>
-                    </small>
+
+                    <button type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#fmod">
+                        See More
+                    </button>
+                    <button type="button" class="btn btn-danger float-right" data-toggle="modal" data-target="#dontRecModal">
+                        Don't Like this?
+                    </button>
                 </div>
             </div>
 
@@ -117,9 +129,9 @@
 <div class="navbar navbar-inverse navbar-fixed-bottom">
 
     <nav>
-        <a class="footerLinks" href="some-url" >Footer link</a> <br>
-        <a class="footerLinks" href="some-url">Footer link</a><br>
-        <a  class="footerLinks" href="some-url">Footer link</a>
+        <a class="footerLinks" href="home.html" >Home</a> <br>
+        <a class="footerLinks" href="goals.html">Goals</a><br>
+        <a  class="footerLinks" href="settings.html">More</a>
     </nav>
     <!-- Copyright footnote -->
     &copy; 2020 Some copyright message.
@@ -129,6 +141,207 @@
     </address>
 </div>
 
-<script type="text/javascript" src="js/addmeal.js"></script>
+<div class="modal fade" id ="fmod" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="3">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Food Title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class ="row">
+                    <div class="col-8">
+                        <h2> Cheeseburger</h2><br>
+                        <h5> This food is recommended because it is high in protein!</h5>
+                        <br><br>
+                        <p> Calories: </p>
+                        <p> Carbs: </p>
+                        <p> Fat: </p>
+                        <p> Protein: </p>
+                        <p>
+                        <a data-toggle="collapse" href="#collapseExample" role="button"  aria-controls="collapseExample">
+                           Show / Hide all nutritional information
+                        </a></p>
+                        <div class="collapse" id="collapseExample">
+                                <p>Saturated Fat : </p>
+                                <p>Polyunsaturated Fat : </p>
+                                <p>Trans Fat : </p>
+                                <p>Cholesterol : </p>
+                                <p>Sodium : </p>
+                                <p>Potassium : </p>
+                                <p>Fiber : </p>
+                                <p>Sugar : </p>
+                                <p>Vitamin A : </p>
+                                <p>Vitamin C : </p>
+                                <p>Calcium : </p>
+                                <p>Iron : </p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <img class="modalImg float-right" src="images/burger.jpg" alt="Card image cap">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Add this food</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id ="createFoodModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="3">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Create a new food</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <label for="foodName" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control-file" id="foodName">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="imgUp" class="col-sm-2 col-form-label">Upload an Image</label>
+                        <div class="col-sm-4">
+                            <input type="file" class="form-control " id="imgUp" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="calories" class="col-sm-2 col-form-label">Calories</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control " id="calories" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="protein" class="col-sm-2 col-form-label">Protein</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control " id="protein" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="carbs" class="col-sm-2 col-form-label">Carbs</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control " id="carbs" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="fat" class="col-sm-2 col-form-label">Fat</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control " id="fat" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="satfat" class="col-sm-2 col-form-label">Saturated Fat</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control " id="satfat" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="polyfat" class="col-sm-2 col-form-label">Polyunsaturated Fat</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control " id="polyfat" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="transfat" class="col-sm-2 col-form-label">Trans Fat</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control " id="transfat" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="cholesterol" class="col-sm-2 col-form-label">Cholesterol</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control " id="cholesterol" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="sodium" class="col-sm-2 col-form-label">Sodium</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control " id="sodium" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="potassium" class="col-sm-2 col-form-label">Potassium</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control " id="potassium" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="fiber" class="col-sm-2 col-form-label">Fiber</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control " id="fiber" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="sugar" class="col-sm-2 col-form-label">Sugar</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control " id="sugar" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="vitA" class="col-sm-2 col-form-label">Vitamin A</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control " id="vitA" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="vitC" class="col-sm-2 col-form-label">Vitamin C</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control " id="vitC" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="calcium" class="col-sm-2 col-form-label">Calcium</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control " id="calcium" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="iron" class="col-sm-2 col-form-label">Iron</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control " id="iron" >
+                        </div>
+                    </div>
+
+
+                </form>
+                </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Add this food</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id ="dontRecModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="3">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Stop Suggesting </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class ="row">
+                    <h4> By clicking confirm, you will no longer be recommended Cheeseburgers.</h4>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>

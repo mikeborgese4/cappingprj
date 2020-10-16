@@ -12,6 +12,7 @@ margin-bottom : 0px;
 .leLeft{
 
 }
+.link{color:black !important;}
 
 
 .liLeft{
@@ -31,3 +32,12 @@ float:right;
   padding-bottom: 50px;
 }
 
+
+.modal .modal-body { /* Vertical scrollbar if necessary */
+  max-height: 750px;
+  overflow-y: auto;
+}
+
+body .modal-dialog { /* Width */
+  max-width: 75%;
+}

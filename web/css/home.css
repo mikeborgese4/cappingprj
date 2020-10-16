@@ -30,3 +30,7 @@ color: dodgerblue;}
 #seeMoreRec{
 color:black !important;
 }
+.card-header{
+    background-color: dodgerblue;
+    color: white !important;
+}

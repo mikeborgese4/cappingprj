@@ -40,11 +40,63 @@
         <h2 class="title" style="text-align:left;float:left;">Settings</h2>
         <br>
         <hr>
-        <h5> <a href="goals.html"> Username: THEUSER1</a></h5>
-        <h5> <a href="goals.html"> Notifications</a></h5>
+        <div class="row">
+
+        <h5> <a > Username: THEUSER1</a></h5>
+        </div>
+        <div class="row">
+
+        <h5> <a> Notifications</a></h5>
+        </div>
+        <div class="row">
+
         <h5> <a href="goals.html"> Goal Moficication</a></h5>
-        <h5> <a href="goals.html"> Color Scheme</a></h5>
-        <h5> <a href="goals.html"> Feedback</a></h5>
+        </div>
+
+        <div class="row">
+
+            <h5> <a > Color Scheme</a></h5>
+        </div>
+
+            <form>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-4">Color Scheme</legend>
+                        <div class="col-sm-8">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="light" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    Light mode (Default)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="dark">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Dark Mdoe
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+        <div class="row">
+        <h5> <a \> Feedback</a></h5>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Feedback</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
         <button id ="logoutbtn" type="button" class="btn btn-light"><h5>Logout</h5></button>
 
 
@@ -56,9 +108,10 @@
 <div class="navbar navbar-inverse navbar-fixed-bottom">
 
     <nav>
-        <a class="footerLinks" href="some-url" >Footer link</a> <br>
-        <a class="footerLinks" href="some-url">Footer link</a><br>
-        <a  class="footerLinks" href="some-url">Footer link</a>
+        <a class="footerLinks" href="home.html" >Home</a> <br>
+        <a  class="footerLinks" href="goals.html">Goals</a><br>
+        <a class="footerLinks" href="addmeal.html">Add a meal</a>
+
     </nav>
     <!-- Copyright footnote -->
     &copy; 2020 Some copyright message.
