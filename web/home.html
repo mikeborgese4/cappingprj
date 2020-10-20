@@ -2,9 +2,10 @@
     <head>
         <link rel="stylesheet" type="text/css" href="css/global.css">
         <link rel="stylesheet" type="text/css" href="libraries/bootstrap-4.3.1-dist/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="libraries/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css.css">
+        <link rel="stylesheet" type="text/css" href="libraries/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
         <link rel="stylesheet" type="text/css" href="css/home.css">
-
+        <script type="text/javascript" src="libraries/jquery-3.5.1.js"></script>
+        <script type="text/javascript" src="libraries/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 
         <meta charset="utf-8">
         <title>Home</title>
@@ -40,7 +41,7 @@
         <div class="offset-1 col-10 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
         <div class="card">
             <div class="card-header">
-                <h2 color="white" > Hello Your Name</h2>
+                <h2 color="white" > Hello <span id="wcHello">Your Name </span></h2>
             </div>
             <div class="card-body">
                 <div class="row" id ="summary">
@@ -55,12 +56,12 @@
                 <div class="row">
                     <div class="col-12 col-md-3 " id ="remainingCals" >
                         Your remaining Calories <br>
-                        <h3 id="claRemaining"> 2000</h3>
+                        <h3 id="wcHeadRemaining"> 2000</h3>
                     </div>
 
-                    <div class="col-4 col-md-3 "><br>Goal:<br><h3>2000    -</h3>  </div>
-                    <div class=" col-4 col-md-3"><br>Food:<br><h3>0    &#9;= </h3>  </div>
-                    <div class="col-4 col-md-3 "><br>Remaining:<br><h3>2000</h3>  </div>
+                    <div class="col-4 col-md-3 "><br>Goal:<br><h3><span id="wcGoal">2000  </span>  -</h3>  </div>
+                    <div class=" col-4 col-md-3"><br>Food:<br><h3><span id="wcFood">0  </span>   &#9;= </h3>  </div>
+                    <div class="col-4 col-md-3 "><br>Remaining:<br><h3><span id="wcRemaining">2000  </span></h3>  </div>
 
                 </div>
             </div>
@@ -79,33 +80,39 @@
                 <div class="card">
                     <img class="card-img-top" src="images/chicken.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Grilled Chicken </h5>
-                        <p class="recReason"> This food is high in Protein!</p>
-                        <p>Calories: </p>
-                        <p>Carbs: </p>
-                        <p>Fat: </p>
-                        <p>Protein: </p>
+                        <h5 class="card-title" id="recTitle1">Grilled Chicken </h5>
+                        <p class="recReason"> This food is high in <span id="recReason1">Protein</span>!</p>
+                        <p>Calories: <span id="recCal1"></span> </p>
+                        <p>Carbs: <span id="recCarb1"></span></p>
+                        <p>Fat: <span id="recFat1"></span></p>
+                        <p>Protein: <span id="recProtein1"></span></p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">
-                            <a class="link"> See More </a>
-                        </small>
+                        <button id="recMore1" type="button" class="add-food-btn btn btn-primary float-left" data-toggle="modal" data-target="#addModal">
+                            See More
+                        </button>
+                        <button type="button" class="btn btn-danger float-right" data-toggle="modal" data-target="#dontRecModal">
+                            Don't Like this?
+                        </button>
                     </div>
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="images/burger.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="recReason"> This food is high in Protein!</p>
-                        <p>Calories: </p>
-                        <p>Carbs: </p>
-                        <p>Fat: </p>
-                        <p>Protein: </p>
+                        <h5 class="card-title" id="recTitle2">Grilled Chicken </h5>
+                        <p class="recReason"> This food is high in <span id="recReason2">Protein</span>!</p>
+                        <p>Calories: <span id="recCal2"></span> </p>
+                        <p>Carbs: <span id="recCarb2"></span></p>
+                        <p>Fat: <span id="recFat2"></span></p>
+                        <p>Protein: <span id="recProtein2"></span></p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">
-                            <a class="link"> See More </a>
-                        </small>
+                        <button id="recMore2" type="button" class="add-food-btn btn btn-primary float-left" data-toggle="modal" data-target="#addModal">
+                            See More
+                        </button>
+                        <button type="button" class="btn btn-danger float-right" data-toggle="modal" data-target="#dontRecModal">
+                            Don't Like this?
+                        </button>
                     </div>
                 </div>
 
@@ -114,33 +121,39 @@
                 <div class="card">
                     <img class="card-img-top" src="images/chicken.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Grilled Chicken </h5>
-                        <p class="recReason">This food is high in Protein!</p>
-                        <p>Calories: </p>
-                        <p>Carbs: </p>
-                        <p>Fat: </p>
-                        <p>Protein: </p>
+                        <h5 class="card-title" id="recTitle3">Grilled Chicken </h5>
+                        <p class="recReason"> This food is high in <span id="recReason3">Protein</span>!</p>
+                        <p>Calories: <span id="recCal3"></span> </p>
+                        <p>Carbs: <span id="recCarb3"></span></p>
+                        <p>Fat: <span id="recFat3"></span></p>
+                        <p>Protein: <span id="recProtein3"></span></p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">
-                            <a class="link"> See More </a>
-                        </small>
+                        <button id="recMore3" type="button" class="add-food-btn btn btn-primary float-left" data-toggle="modal" data-target="#addModal">
+                            See More
+                        </button>
+                        <button type="button" class="btn btn-danger float-right" data-toggle="modal" data-target="#dontRecModal">
+                            Don't Like this?
+                        </button>
                     </div>
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="images/burger.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="recReason"> This food is high in Protein!</p>
-                        <p>Calories: </p>
-                        <p>Carbs: </p>
-                        <p>Fat: </p>
-                        <p>Protein: </p>
+                        <h5 class="card-title" id="recTitle4">Grilled Chicken </h5>
+                        <p class="recReason"> This food is high in <span id="recReason4">Protein</span>!</p>
+                        <p>Calories: <span id="recCal4"></span> </p>
+                        <p>Carbs: <span id="recCarb4"></span></p>
+                        <p>Fat: <span id="recFat4"></span></p>
+                        <p>Protein: <span id="recProtein4"></span></p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">
-                            <a class="link"> See More </a>
-                        </small>
+                        <button id="recMore4" type="button" class="add-food-btn btn btn-primary float-left" data-toggle="modal" data-target="#addModal">
+                            See More
+                        </button>
+                        <button type="button" class="btn btn-danger float-right" data-toggle="modal" data-target="#dontRecModal">
+                            Don't Like this?
+                        </button>
                     </div>
                 </div>
 
@@ -163,5 +176,76 @@
         </address>
     </div>
     <script type="text/javascript" src="js/home.js"></script>
+
+    <div class="modal fade" id ="addModal" tabindex="-1" role="dialog" aria-labelledby="addFoodModal" aria-hidden="3">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id ="addModalTitle">Food Title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class ="row">
+                        <div class="col-8">
+                            <h2 id="addModalTitle2"> Cheeseburger</h2><br>
+                            <h5> This food is recommended because it is high in <span id ="addModalRecReason">protein</span>!</h5>
+                            <br><br>
+                            <p> Calories:<span id ="addModalCals"></span> </p>
+                            <p> Carbs: <span id ="addModalCarbs"></span></p>
+                            <p> Fat: <span id ="addModalFat"></span></p>
+                            <p> Protein: <span id ="addModalProtein"></span></p>
+                            <p>
+                                <a data-toggle="collapse" href="#collapseExample" role="button"  aria-controls="collapseExample">
+                                    Show / Hide all nutritional information
+                                </a></p>
+                            <div class="collapse" id="collapseExample">
+                                <p>Saturated Fat : <span id ="addModalSatFat"></span></p>
+                                <p>Polyunsaturated Fat : <span id ="addModalPolyFat"></span></p>
+                                <p>Trans Fat : <span id ="addModalTransFat"></span></p>
+                                <p>Cholesterol : <span id ="addModalCholesterol"></span></p>
+                                <p>Sodium : <span id ="addModalSodium"></span></p>
+                                <p>Potassium : <span id ="addModalPotassium"></span></p>
+                                <p>Fiber : <span id ="addModalFiber"></span></p>
+                                <p>Sugar : <span id ="addModalSugar"></span></p>
+                                <p>Vitamin A : <span id ="addModalVitA"></span></p>
+                                <p>Vitamin C : <span id ="addModalVitC"></span></p>
+                                <p>Calcium : <span id ="addModalCalcium"></span></p>
+                                <p>Iron : <span id ="addModalIron"></span></p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <img class="modalImg float-right" src="images/burger.jpg" alt="Card image cap">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Add this food</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id ="dontRecModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="3">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Stop Suggesting </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class ="row">
+                        <h4> By clicking confirm, you will no longer be recommended Cheeseburgers.</h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
     </body>
     </html>

@@ -34,3 +34,20 @@ color:black !important;
     background-color: dodgerblue;
     color: white !important;
 }
+
+.modal .modal-body { /* Vertical scrollbar if necessary */
+    max-height: 750px;
+    overflow-y: auto;
+}
+
+body .modal-dialog { /* Width */
+    max-width: 75%;
+}
+.modalImg{
+
+    display: block;
+    max-width: 100%;
+
+    width: auto;
+    height: auto;
+}
