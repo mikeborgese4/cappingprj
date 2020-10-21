@@ -9,13 +9,13 @@ $(document).ready(function() {
     $("#dontRecConfirmBTN").click(function() {
         dontRec($(this).attr('data-foodID'));
     });
-    $("#creatFoodForm").onsubmit = function (){
-     console.log(1);
-    }
+
     $('#creatFoodForm').submit(function(e) {
-        console.log("1");
-        dontRec(1);
+        createFood($( this ).serializeArray() );
+
     });
+    //make form for button and add serving amount
+
 
 
 });
@@ -38,9 +38,11 @@ function setRecs(){
 function setAddModal(data){
     console.log(data);
     //make sure the colapsible is colapsed
+    $('#addFoodButton').attr('data-foodID',data);
     $("#addModalTitle").html("Burger");
     $("#addModalTitle2").html("Burger");
     $("#addModalRecReason").html("protein");
+    $("#addModalServs").html("0");
     $("#addModalCals").html("0");
     $("#addModalCarbs").html("0");
     $("#addModalFat").html("0");
@@ -61,5 +63,28 @@ function setAddModal(data){
 function dontRec(id){
     $('#dontRecModal').modal('hide');
     console.log(id);
+
+}
+function createFood(data){
+    let name = data[0].value;
+    let img = data[1].value;
+    let servSize = data[2].value;
+    let sers = data[3].value;
+    let cals = data[4].value;
+    let protein = data[5].value;
+    let carbs = data[6].value;
+    let fat = data[7].value;
+    let satfat = data[8].value;
+    let polyfat = data[9].value;
+    let transfat = data[10].value;
+    let chol = data[11].value;
+    let sodium = data[12].value;
+    let potassium = data[13].value;
+    let fiber = data[14].value;
+    let sugar = data[15].value;
+    let vitA = data[16].value;
+    let vitC = data[17].value;
+    let calcium = data[18].value;
+    let iron = data[19].value;
 
 }

@@ -158,115 +158,127 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form id = "creatFoodForm" onsubmit="dontRec(1)">
+            <form id = "creatFoodForm" >
             <div class="modal-body">
 
                     <div class="form-group row">
                         <label for="foodName" class="col-sm-2 col-form-label">Name</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control-file" id="foodName">
+                            <input type="text" class="form-control-file" id="foodName"name="foodName">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="imgUp" class="col-sm-2 col-form-label">Upload an Image</label>
                         <div class="col-sm-4">
-                            <input type="file" class="form-control " id="imgUp" >
+                            <input type="file" class="form-control " id="imgUp"name="img" >
                         </div>
                     </div>
                     <div class="form-group row">
+                        <label for="servingSize" class="col-sm-2 col-form-label">Serving Size</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control " id="servingSize"name="servingSize" required>
+                        </div>
+                    </div>
+                <div class="form-group row">
+                        <label for="servings" class="col-sm-2 col-form-label">Servings</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control " id="servings" name="servings" required>
+                        </div>
+                    </div>
+                <div class="form-group row">
                         <label for="calories" class="col-sm-2 col-form-label">Calories</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control " id="calories" readonly>
+                            <input type="number" class="form-control " id="calories" name="calories" readonly>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="protein" class="col-sm-2 col-form-label">Protein</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control " id="protein" >
+                            <input type="number" class="form-control " id="protein" name="protein" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="carbs" class="col-sm-2 col-form-label">Carbs</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control " id="carbs" >
+                            <input type="number" class="form-control " id="carbs" name="carbs" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="fat" class="col-sm-2 col-form-label">Fat</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control " id="fat" >
+                            <input type="number" class="form-control " id="fat"name="fat" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="satfat" class="col-sm-2 col-form-label">Saturated Fat</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control " id="satfat" >
+                            <input type="number" class="form-control " id="satfat"name="satfat"required >
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="polyfat" class="col-sm-2 col-form-label">Polyunsaturated Fat</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control " id="polyfat" >
+                            <input type="number" class="form-control " id="polyfat" name="polyfat" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="transfat" class="col-sm-2 col-form-label">Trans Fat</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control " id="transfat" >
+                            <input type="number" class="form-control " id="transfat" name="transfat" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="cholesterol" class="col-sm-2 col-form-label">Cholesterol</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control " id="cholesterol" >
+                            <input type="number" class="form-control " id="cholesterol" name="cholesterol" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="sodium" class="col-sm-2 col-form-label">Sodium</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control " id="sodium" >
+                            <input type="number" class="form-control " id="sodium" name="sodium" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="potassium" class="col-sm-2 col-form-label">Potassium</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control " id="potassium" >
+                            <input type="number" class="form-control " id="potassium" name="potassium" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="fiber" class="col-sm-2 col-form-label">Fiber</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control " id="fiber" >
+                            <input type="number" class="form-control " id="fiber" name="fiber" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="sugar" class="col-sm-2 col-form-label">Sugar</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control " id="sugar" >
+                            <input type="number" class="form-control " id="sugar" name="sugar" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="vitA" class="col-sm-2 col-form-label">Vitamin A</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control " id="vitA" >
+                            <input type="number" class="form-control " id="vitA" name="vitA" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="vitC" class="col-sm-2 col-form-label">Vitamin C</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control " id="vitC" >
+                            <input type="number" class="form-control " id="vitC" name="vitC" required >
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="calcium" class="col-sm-2 col-form-label">Calcium</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control " id="calcium" >
+                            <input type="number" class="form-control " id="calcium" name="calcium" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="iron" class="col-sm-2 col-form-label">Iron</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control " id="iron" >
+                            <input type="number" class="form-control " id="iron" name="iron" required>
                         </div>
                     </div>
 
@@ -276,7 +288,8 @@
 
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary">Add this food</button>
-            </div>    </form>
+            </div>
+            </form>
         </div>
     </div>
 </div>
@@ -296,6 +309,7 @@
                         <h2 id="addModalTitle2"> Cheeseburger</h2><br>
                         <h5> This food is recommended because it is high in <span id ="addModalRecReason">protein</span>!</h5>
                         <br><br>
+                        <p> Serving Size:<span id ="addModalServs"></span> </p>
                         <p> Calories:<span id ="addModalCals"></span> </p>
                         <p> Carbs: <span id ="addModalCarbs"></span></p>
                         <p> Fat: <span id ="addModalFat"></span></p>
@@ -325,7 +339,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Add this food</button>
+                <button id ="addFoodButton" type="submit" class="btn btn-primary">Add this food</button>
             </div>
         </div>
     </div>
