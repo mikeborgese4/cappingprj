@@ -4,6 +4,14 @@ $( document ).ready(function() {
     $(".add-food-btn").click(function() {
        setAddModal($(this).attr('data-foodID'));
     });
+    $(".dontRec-btn").click(function() {
+      $('#dontRecConfirmBTN').attr('data-foodID', $(this).attr('data-foodID'));
+    });
+    $("#dontRecConfirmBTN").click(function() {
+        dontRec($(this).attr('data-foodID'));
+    });
+
+
 });
 function setWelcomeCard(){
     $("#wcGoal").html("2000");
@@ -22,6 +30,8 @@ function setRecs(){
         $("#recProtein"+i).html("50");
         $("#recFat"+i).html("50");
         $("#recMore"+i).attr("data-foodID" , "id");
+        $("#recDont"+i).attr("data-foodID" , i);
+
     }
 
 }
@@ -49,4 +59,8 @@ function setAddModal(data){
     $("#addModalCalcium").html("0");
     $("#addModalIron").html("0");
 }
+function dontRec(id){
+    $('#dontRecModal').modal('hide');
+    console.log(id);
 
+}
